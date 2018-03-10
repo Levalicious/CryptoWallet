@@ -7,10 +7,15 @@ To generate a wallet from a WIF, use Wallet wallet = new Wallet(*insert your WIF
 The following methods can be called from your wallet objects:
 
 getPublicKey()
+
 getPublicAddress()
-getPrivateKe()
+
+getPrivateKey()
+
 getWIF()
+
 setPrivate(String wif)
+
 setPublic()
 
 You can customize the network ID and the WIF prefix at the top of Wallet.java
