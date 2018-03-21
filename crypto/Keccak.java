@@ -1,6 +1,6 @@
 package crypto;
 
-import static utils.HexUtils.getReverseHex;
+import static util.HexUtils.getReverseHex;
 
 import java.math.BigInteger;
 

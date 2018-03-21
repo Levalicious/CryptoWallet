@@ -1,4 +1,4 @@
-package utils;
+package util;
 
 @SuppressWarnings("serial")
 public class AddressFormatException extends IllegalArgumentException {
