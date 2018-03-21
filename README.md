@@ -6,18 +6,18 @@ To generate a wallet from a WIF, use Wallet wallet = new Wallet(*insert your WIF
 
 The following methods can be called from your wallet objects:
 
-getPublicKey()
+toString()
 
-getPublicAddress()
+getKeys()
 
-getPrivateKey()
+getPubAddress()
+
+getPubKey()
 
 getWIF()
 
-setPrivate(String wif)
+getPrivKey()
 
-setPublic()
-
-You can customize the network ID and the WIF prefix at the top of Wallet.java
+You can customize the network ID and the WIF prefix, as well as the curve used in resources.Config;
 
 This uses BitcoinJ's Base58 class & their AddressFormatException class, and this repo for hashing: https://github.com/romus/sha
