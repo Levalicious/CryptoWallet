@@ -28,7 +28,7 @@ public class Public implements Config{
     private static X9ECParameters x9Params = CustomNamedCurves.getByName(curve);
 
     public static String publicKeyToAddress(PublicKey publicKey) {
-        Security.addProvider(new BouncyCastleProvider());
+
 
         String temp = publicKeyToString(publicKey);
 

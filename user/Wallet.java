@@ -1,7 +1,10 @@
 package user;
 
+import org.bouncycastle.jce.provider.BouncyCastleProvider;
+
 import java.security.PrivateKey;
 import java.security.PublicKey;
+import java.security.Security;
 
 import static util.wallet.Private.*;
 import static util.wallet.Public.*;
@@ -11,6 +14,7 @@ public class Wallet {
     private PublicKey publicKey;
 
     public Wallet() {
+        Security.addProvider(new BouncyCastleProvider());
         newWallet();
         refreshKeyPair();
     }
@@ -21,6 +25,7 @@ public class Wallet {
     }
 
     public static Wallet importWallet(String wif) {
+        Security.addProvider(new BouncyCastleProvider());
         Wallet wallet = new Wallet(wif);
         return wallet;
     }

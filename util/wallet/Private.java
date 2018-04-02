@@ -22,7 +22,7 @@ public class Private implements Config{
     private static X9ECParameters x9Params = CustomNamedCurves.getByName(curve);
 
     public static PrivateKey generateNewPrivateKey() {
-        Security.addProvider(new BouncyCastleProvider());
+        
 
         SecureRandom random;
         try {
@@ -59,7 +59,7 @@ public class Private implements Config{
     }
 
     public static String privateKeyToWIF(PrivateKey privateKey) {
-        Security.addProvider(new BouncyCastleProvider());
+        
 
         String tempKey = getHex(((ECPrivateKey)privateKey).getS().toByteArray());
 
@@ -77,12 +77,12 @@ public class Private implements Config{
     }
 
     public static String privateKeyToString(PrivateKey privateKey) {
-        Security.addProvider(new BouncyCastleProvider());
+        
         return getHex(((ECPrivateKey)privateKey).getS().toByteArray());
     }
 
     public static PrivateKey stringToPrivateKey(String wif) {
-        Security.addProvider(new BouncyCastleProvider());
+        
 
         validateWIF(wif);
 
@@ -116,7 +116,7 @@ public class Private implements Config{
     }
 
     public static void validateWIF(String wif) {
-        Security.addProvider(new BouncyCastleProvider());
+        
         wif = getHex(decode(wif));
         String prefix = wif.substring(0, 2);
         String key = wif.substring(2, wif.length() - 8);
