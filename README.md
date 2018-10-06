@@ -21,3 +21,6 @@ getPrivKey()
 You can customize the network ID and the WIF prefix, as well as the curve used in resources.Config;
 
 This uses BitcoinJ's Base58 class & their AddressFormatException class, and this repo for hashing: https://github.com/romus/sha
+
+# Edit #
+Please don't use this. It *works*, theoretically, provided it's set up correctly, but the code is an impossible to understand mess, and I have a much nicer (and shinier! And just better overall through magic Schnorr dust!) implementation of the necessary cryptographic signing algorithm over at my SchnorrCode repository. Check that out instead.
